@@ -1,0 +1,26 @@
+Wed, 14 Sep 2011 05:39:49 -0700
+./app/controllers/application_controller.rb	Fri, 19 Aug 2011 00:03:43 -0700
+./app/helpers/application_helper.rb	Fri, 19 Aug 2011 00:03:43 -0700
+./config/application.rb	Fri, 19 Aug 2011 00:03:43 -0700
+./config/boot.rb	Fri, 19 Aug 2011 00:03:43 -0700
+./config/environment.rb	Fri, 19 Aug 2011 00:03:43 -0700
+./config/environments/development.rb	Fri, 19 Aug 2011 00:03:43 -0700
+./config/environments/production.rb	Fri, 19 Aug 2011 00:03:43 -0700
+./config/environments/test.rb	Fri, 19 Aug 2011 00:03:43 -0700
+./config/initializers/backtrace_silencers.rb	Fri, 19 Aug 2011 00:03:43 -0700
+./config/initializers/inflections.rb	Fri, 19 Aug 2011 00:03:43 -0700
+./config/initializers/mime_types.rb	Fri, 19 Aug 2011 00:03:43 -0700
+./config/initializers/secret_token.rb	Fri, 19 Aug 2011 00:03:43 -0700
+./config/initializers/session_store.rb	Fri, 19 Aug 2011 00:03:43 -0700
+./config/initializers/wrap_parameters.rb	Fri, 19 Aug 2011 00:03:43 -0700
+./config/routes.rb	Fri, 19 Aug 2011 00:03:43 -0700
+./db/seeds.rb	Fri, 19 Aug 2011 00:03:43 -0700
+./doc/README_FOR_APP	Fri, 19 Aug 2011 00:03:43 -0700
+./Gemfile	Fri, 19 Aug 2011 00:38:20 -0700
+./Gemfile~	Fri, 19 Aug 2011 00:03:43 -0700
+./public/robots.txt	Fri, 19 Aug 2011 00:03:43 -0700
+./Rakefile	Fri, 19 Aug 2011 00:03:43 -0700
+./README	Fri, 19 Aug 2011 00:03:43 -0700
+./script/rails	Fri, 19 Aug 2011 00:03:43 -0700
+./test/performance/browsing_test.rb	Fri, 19 Aug 2011 00:03:43 -0700
+./test/test_helper.rb	Fri, 19 Aug 2011 00:03:43 -0700

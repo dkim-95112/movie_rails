@@ -1,0 +1,38 @@
+<h1>Movie#index</h1>
+<p>Find me in app/views/movie/index.html.erb</p>
+
+
+<div id="wide-background">
+  <div id="wide-label">wide label</div>
+  <div id="right-col">right
+    <dl id="actor-list">
+    </dl>
+  </div>
+  <div id="left-col">left
+      <dl id="movie-list">
+        <% @movies.each do |movie| %>
+          <%= content_tag('dt', movie.title, :data => {:id => movie.id}, :class => 'movie-title') %>
+        <% end %>
+      </dl>
+  </div>
+</div>
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="100">
+      <circle id="my-ball" cx="100" cy="40" r="40" stroke="black"
+        stroke-width="2" fill="red" />
+    <g font-family="Verdana" font-size="15" >
+      <text x="200" y="15" fill="blue">
+        You are
+          <tspan font-weight="bold" fill="red" >not</tspan>
+        a banana.
+      </text>
+    </g>
+  </svg>
+
+<div id="comment-outer">
+  <form action="/post/create" method="post" onsubmit="alert('form submitted')">
+    <input type="textarea">
+  </form>
+</div>
+
+
