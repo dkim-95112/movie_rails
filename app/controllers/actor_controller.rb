@@ -14,6 +14,7 @@ class ActorController < ApplicationController
     respond_to do |format|
       format.html  # index.html.erb
       format.json { render :json => @movies }
+      format.js  { render :text => "#{params[:jsonp]}(#{@movies.to_json});" }
     end
   end
 end
