@@ -30,8 +30,8 @@
   </svg>
 
 <div id="comment-outer">
-  <form action="/post/create" method="post" onsubmit="alert('form submitted')">
-    <input type="textarea">
+  <form onsubmit="alert('form submitted: ' + this.my_text.value)">
+    <input name="my_text" type="textarea">
   </form>
 </div>
 

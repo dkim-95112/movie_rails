@@ -13,7 +13,6 @@
   position: relative;
   background-color: #ece;
   width: 50%;
-  //padding-left: 1em;
   padding-bottom: 1em;
 }
 #left-col {
@@ -30,9 +29,10 @@
 }
 dl {
   margin: 0em;
+  padding-left: 1em;
 }
 dt {
-  border-left: 1px dashed #6698ff;
+  border-left: 1px solid #6698ff;
   padding-left: 1em;
   padding-right: 1em;
   &:hover {
@@ -42,14 +42,16 @@ dt {
 
 #comment-outer {
   background-color: #eee;
-  padding-left: 5em;
-  padding-right: 5em;
+  margin-left: 5em;
+  margin-right: 5em;
   form {
     padding: 0em;
     margin: 0em;
     input[type="textarea"] {
       position: relative;
-      padding: 1em;
+      left: -8px;
+      margin: 0em;
+      padding: 6px;
       //border: none;
       width: 100%;
     }

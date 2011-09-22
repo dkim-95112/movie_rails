@@ -26,7 +26,8 @@ update_list_elems = (list_elem_id, list_item_data, data_field)->
     # remove extra
     for cur_item in [list_item_data.length...list_item_elems.length]
       do (cur_item)->
-        list_elem.removeChild(list_item_elems[cur_item])
+        delete list_elem.removeChild(list_item_elems[cur_item])
+
 
 append_jsonp_script_tag = (list_elem_id, url, data_field)->
 
@@ -40,7 +41,7 @@ append_jsonp_script_tag = (list_elem_id, url, data_field)->
     body_tag = document.getElementsByTagName('body')[0]
     script_tag = body_tag.getElementsByTagName('script')[0]
     debugger if parseInt(script_tag.dataset.id) != uid  # sanity
-    body_tag.removeChild(script_tag)
+    delete body_tag.removeChild(script_tag)
 
   # add the script tag to the document, cross fingers
   url += "?jsonp=" + encodeURIComponent("my_jsonp_callbacks[" + uid + "]")
@@ -49,6 +50,7 @@ append_jsonp_script_tag = (list_elem_id, url, data_field)->
     my_jsonp_script_tag.setAttribute(k,v) 
   body_tag = document.getElementsByTagName('body')[0]
   body_tag.appendChild(my_jsonp_script_tag)
+
 
 update_list = (user_event) ->
   user_event.stopPropagation()
