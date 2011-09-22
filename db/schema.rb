@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(:version => 20110916051554) do
   end
 
   add_index "casts", ["actor_id"], :name => "actor_id"
-  add_index "casts", ["movie_id", "actor_id"], :name => "movie_actor_id", :unique => true
+  add_index "casts", ["movie_id", "actor_id"], :name => "movie_id", :unique => true
 
   create_table "movies", :force => true do |t|
     t.string   "title"
