@@ -1,0 +1,17 @@
+%div
+  =link_to_function "[ widget panel ]", "$('#my-widget-panel').toggle()"
+#my-widget-panel(style="margin-bottom: 5em")
+  #my-hover-panel
+
+%div
+  =link_to_function "[ widget usage ]", "$('#my-widget-usage').toggle()"
+#my-widget-usage(style="margin-left:2em")
+  %pre= File.read("app/assets/javascripts/hover_panel_usage.js")
+
+%div
+  =link_to_function "[ widget source ]", "$('#my-widget-source').toggle()"
+#my-widget-source(style="margin-left:4em;overflow-y:scroll;height:640px")
+  %pre= File.read("app/assets/javascripts/jquery.hover_panel.js")
+
+=javascript_include_tag "jquery.hover_panel.js"
+=javascript_include_tag "hover_panel_usage.js"

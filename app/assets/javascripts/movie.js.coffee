@@ -28,7 +28,6 @@ update_list_elems = (list_elem_id, list_item_data, data_field)->
       do (cur_item)->
         delete list_elem.removeChild(list_item_elems[cur_item])
 
-
 append_jsonp_script_tag = (list_elem_id, url, data_field)->
 
   # setup jsonp callback
@@ -39,9 +38,10 @@ append_jsonp_script_tag = (list_elem_id, url, data_field)->
 
     # callback finished so remove script tag
     body_tag = document.getElementsByTagName('body')[0]
-    script_tag = body_tag.getElementsByTagName('script')[0]
-    debugger if parseInt(script_tag.dataset.id) != uid  # sanity
-    delete body_tag.removeChild(script_tag)
+    script_tags = body_tag.getElementsByTagName('script')
+    last_script_tag = script_tags[script_tags.length - 1]
+    debugger if parseInt(last_script_tag.dataset.id) != uid  # sanity
+    delete body_tag.removeChild(last_script_tag)
 
   # add the script tag to the document, cross fingers
   url += "?jsonp=" + encodeURIComponent("my_jsonp_callbacks[" + uid + "]")
@@ -57,15 +57,13 @@ update_list = (user_event) ->
   data_id = user_event.target.dataset.id
   switch user_event.currentTarget.id
     when "movie-list"
-      append_jsonp_script_tag("actor-list", data_id + "/actors.js", "name")
+      append_jsonp_script_tag("actor-list", "/movie/" + data_id + "/actors.js", "name")
     when "actor-list"
       append_jsonp_script_tag("movie-list", "/actor/" + data_id + "/movies.js", "title")
     else
       debugger  # sanity
 
-my_load = () ->
-  document.getElementById('movie-list').addEventListener('click', update_list, true)
-  document.getElementById('actor-list').addEventListener('click', update_list, true)
+document.getElementById('movie-list').addEventListener('click', update_list, true)
+document.getElementById('actor-list').addEventListener('click', update_list, true)
 
-window.addEventListener("load", my_load, false)
 

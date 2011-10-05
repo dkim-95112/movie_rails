@@ -5,8 +5,8 @@ gem 'rails', '3.1.0.rc8'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-gem 'mysql2'
+#gem 'sqlite3'
+#gem 'mysql2'
 
 # Asset template engines
 gem 'sass-rails', "~> 3.1.0.rc"
@@ -29,8 +29,12 @@ group :test do
   gem 'turn', :require => false
 end
 
-gem 'execjs'
-gem "therubyracer"
+# heroku default runtime is 'node.js' at this time
+#gem 'execjs'
+#gem "therubyracer"
 
-gem 'pg'
-gem 'thin'
+gem 'pg'  # heroku shared database is postgresql
+gem 'thin'  # heroku site highly recommends 'thin'
+
+gem 'haml'
+gem 'coffee-filter'

@@ -9,4 +9,4 @@
 // This following 'require_tree .' is including emacs temp files, eg. 'foo~'
 // require_tree .
 // So, require files by explicit name
-//=require movie.js.coffee
+//require movie.js.coffee

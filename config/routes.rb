@@ -1,8 +1,15 @@
 TvGuide::Application.routes.draw do
+  root :to => 'movie#index'
+
+  get 'movie/index' => 'movie#index'
+  get 'samples/jquery_plugin' => 'samples#jquery_plugin'
+  get 'samples/quartz_composition' => 'samples#quartz_composition'
+  get 'samples/bash_script' => 'samples#bash_script'
+  get 'samples/google_webgl' => 'samples#webgl_sample'
+
   get 'movie/index'  # => 'movie#index'
   match 'movie/:id/actors' => 'movie#actors'
   match 'actor/:id/movies' => 'actor#movies'
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -19,15 +19,14 @@ ActiveRecord::Schema.define(:version => 20110916051554) do
     t.datetime "updated_at"
   end
 
-  add_index "actors", ["name"], :name => "name", :unique => true
+  add_index "actors", ["name"], :name => "actors_name_key", :unique => true
 
   create_table "casts", :id => false, :force => true do |t|
     t.integer "actor_id"
     t.integer "movie_id"
   end
 
-  add_index "casts", ["actor_id"], :name => "actor_id"
-  add_index "casts", ["movie_id", "actor_id"], :name => "movie_id", :unique => true
+  add_index "casts", ["movie_id", "actor_id"], :name => "casts_movie_id_actor_id_key", :unique => true
 
   create_table "movies", :force => true do |t|
     t.string   "title"
@@ -35,6 +34,6 @@ ActiveRecord::Schema.define(:version => 20110916051554) do
     t.datetime "updated_at"
   end
 
-  add_index "movies", ["title"], :name => "title", :unique => true
+  add_index "movies", ["title"], :name => "movies_title_key", :unique => true
 
 end

@@ -4,7 +4,7 @@ class CreateMovies < ActiveRecord::Migration
       t.string :title
       t.timestamps
     end
-    execute "alter table movies add constraint unique index (title)"
+    execute "alter table movies add unique (title)"
   end
 
   def down

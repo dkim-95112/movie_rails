@@ -9,13 +9,12 @@
 #  pool: 5
 #  timeout: 5000
 development:
-  adapter: mysql2
-  encoding: utf8
+  adapter: postgresql
+  encoding: unicode
   database: movie_rails
   pool: 5
-  username: movie_rails_user
-  password: movie_rails_pass
-  socket: /tmp/mysql.sock
+  username: postgres
+  password: postgres
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

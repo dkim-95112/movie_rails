@@ -1,0 +1,21 @@
+!!!XML
+!!!
+%html
+  %head
+    %title= "Portfolio"
+    = stylesheet_link_tag    "application" 
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    %header
+      #my-clock= raw "&nbsp;"
+      #notice=flash[:notice]
+      %h1= "My Portfolio"
+      %nav
+        %ul
+          %li= link_to "movie database", {:controller => "movie", :action => "index"}
+          %li= link_to "jQuery Plugin", {:controller => "samples", :action => "jquery_plugin"}
+          %li= link_to "Quartz Composition", {:controller => "samples", :action => "quartz_composition"}
+          -#%li= link_to "bash_script", {:controller => "samples", :action => "bash_script"}
+          %li= link_to "WebGL Sample", {:controller => "samples", :action => "webgl_sample"}
+    = yield

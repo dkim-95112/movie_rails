@@ -4,9 +4,9 @@ class CreateCasts < ActiveRecord::Migration
       t.references :actor
       t.references :movie
     end
-    execute "alter table casts add constraint unique index (movie_id, actor_id)"
-    execute "alter table casts add constraint foreign key (movie_id) references movies (id) on delete cascade on update cascade"
-    execute "alter table casts add constraint foreign key (actor_id) references actors (id) on delete cascade on update cascade"
+    execute "alter table casts add unique (movie_id, actor_id)"
+    execute "alter table casts add foreign key (movie_id) references movies(id) on delete cascade on update cascade"
+    execute "alter table casts add foreign key (actor_id) references actors(id) on delete cascade on update cascade"
   end
 
   def down

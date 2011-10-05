@@ -4,7 +4,7 @@ class CreateActors < ActiveRecord::Migration
       t.string :name
       t.timestamps
     end
-    execute "alter table actors add constraint unique index (name)"
+    execute "alter table actors add unique (name)"
   end
 
   def down
